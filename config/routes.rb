@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tweets
     get 'post/index'
 
     root 'post#index'
