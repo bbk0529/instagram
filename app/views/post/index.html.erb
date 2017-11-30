@@ -1,2 +1,32 @@
 <h1>인스타그램이요</h1>
-<p>Find me in app/views/post/index.html.erb</p>
+<p>당신의 이름을 입력해주세요.</p>
+
+<%= form_tag "/post/welcome", method: :get do %>
+  <%= text_field_tag :keyword%>
+  <%= submit_tag %>
+<% end %>
+
+
+
+<%= form_tag "/post/welcome", id:"keyword", method: :get do %>
+  <%= text_field_tag :keyword, "input your text here", id: "text"%>
+  <%= submit_tag %>
+<% end %>
+
+
+<span id="span_key"></span>
+
+<script>
+$(()=> {
+  $(document).on('submit','#keyword',function(e){
+    e.preventDefault();
+    console.log("haha");
+    var test=$('#text').val();
+    console.log(test);
+    $('#span_key').text(test + "님 환영합니다");
+
+  });
+
+
+});
+</script>
