@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
     root 'post#index'
     get 'post/welcome' => 'post#welcome'
+    post 'post/wel' => 'post#wel'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -13,8 +13,14 @@
   <%= submit_tag %>
 <% end %>
 
+<%= form_tag "/post/wel", remote: "true" do %>
+  <%= text_field_tag :keyword%>
+  <%= submit_tag %>
+<% end %>
+
 
 <span id="span_key"></span>
+<div id="hello"> </div>
 
 <script>
 $(()=> {
